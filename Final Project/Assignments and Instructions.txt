@@ -1,0 +1,17 @@
+HTML Assignments:
+
+Home/About: Paul
+Training: Kevin
+Quiz: Mailyn
+External Resources: Hussein
+
+Instructions:
+	1. Copy and paste text into your editor. When you're done, re-upload as .txt file.
+	2. Make sure to validate your sites
+	3. Whenever you upload something, please notify the group chat
+	4. Make sure to include comment in your code
+	5. If you know something will not make sense when we bring our code together, it is okay. We will review
+	and configure our code next time we come together.
+	6. Please reach out to the group chat if you have any questions or concerns.
+
+Thanks!

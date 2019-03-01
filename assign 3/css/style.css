@@ -1,0 +1,165 @@
+* {
+    background-color: black; color: ghostwhite;
+    text-align: center;
+}
+
+h1, h3{
+    font-family: Algorian, Georgia;
+}
+p {
+    font-family: "Century Gothic", "Times New Roman", Georgia;
+}
+
+/* make the articles align the picture */
+.content, article h3{
+    text-align: left;
+    margin-left: 14%;
+    width: 70%;
+    line-height: 1.5em;
+}
+
+img {
+    margin-top: 5em;
+    margin-bottom: 2em;
+    border: 3px solid darkred;
+}
+
+#eg {
+    width: 60%;
+}
+
+a.gotop {
+    color: red;
+}
+
+.picrow img {
+    transition: transform .2s;
+}
+
+.picrow img:hover {
+    transform: scale(1.5);
+}
+
+.navbar {
+    list-style-type: none;
+    background-color: #3d3d3d;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* the dropdown menu idea reference from w3schools.com */
+li {
+    float: left;
+}
+
+li a, .dropit {
+    display: inline-block;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 1em 5em;
+    background-color: #3d3d3d;
+}
+
+li a:hover, .dropdown:hover .dropit {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block
+}
+
+.drop-content {
+    display: none;
+    position: absolute;
+    background-color: #3d3d3d;
+    min-width: 10em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.drop-content a{
+    padding: 0.8em 3.5em;
+    text-decoration: none;
+    display: block;
+}
+
+.drop-content a:hover {
+    background-color: red;
+}
+
+.dropdown:hover .drop-content {
+    display: block;
+}
+footer {
+    margin-top: 5em;
+}
+
+h3 {
+    border-top: 2px solid red;
+    padding-top: 1em;
+}
+
+.piccol {
+    float:left;
+    padding: 1em;
+    width: 30.3%;
+}
+.picrow::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.piccol img, .picrow img {
+    width: 100%;
+}
+
+.survey1 form, .survey2 form {
+    text-align: left;
+    margin: 5em 60% 3em 15%;
+    border: 2px dotted darkred;
+    padding: 1em;
+    width: 60%;
+}
+
+button {
+    background-color: red;
+    border-color: darkred;
+    padding: 1em 1.5em;
+    font-weight: bold;
+}
+
+.survey1, .survey2 {
+    float: left;
+    width: 40%;
+}
+
+.survey1 {
+    margin-left: 10%;
+    margin-right: 0;
+    width: 40%;
+}
+.survey2 {
+    margin-right: 10%;
+}
+
+.emailaddress {
+    clear: both;
+}
+
+.emailaddress input {
+    background-color: white;
+    color: black;
+}
+
+#drum li {
+    float: none;
+    text-align: left;
+    line-height: 1.5em;
+}
+#drum {
+    margin-left: 35%;
+    list-style-type: square;
+    border-left: 2px solid darkred;
+}

@@ -1,0 +1,37 @@
+﻿header {
+    background-color: rgb(51,0,111); border: 0px;
+}
+.welcome {
+    color: lightgray;
+    text-align: center;
+}
+
+body
+{
+    color: rgb(232,211,162);
+    background-color: rgb(51,0,111); border: 0px;
+}
+a:link {
+    color: rgb(145,123,76);
+}
+a:visited{
+    color: #ffdd00;
+}
+button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+table {
+    width: 100%;
+    border: 1px solid gold;
+    border-collapse: collapse;
+}
+
+th, td {
+    height: 50px;
+    text-align: left;
+    border: 1px solid gold;
+    padding-left: 15px;
+}

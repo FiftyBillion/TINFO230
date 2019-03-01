@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!-- this is the drums page -->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Drum Kit</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <script src="../jquery/jquery-3.3.1.min.js"></script>
+    </head>
+    
+    <body>
+        
+        <script>
+            // reference: https://codepen.io/josh-tucholski/pen/YLEzPx
+            // I took the basic concept from the website, and modify from it
+            // when clicking the list of words, it will make the sound.
+            $(document).ready(function(){
+                document.querySelector("#hihat").onclick = playHihat;
+                document.querySelector("#kick").onclick = playKick;
+                document.querySelector("#floordrum").onclick = playFloordrum;
+                document.querySelector("#ride").onclick = playRide;
+                document.querySelector("#snare").onclick = playSnare;
+                document.querySelector("#tom").onclick = playTom;
+                document.querySelector("#crash").onclick = playCrash;
+
+                document.querySelector("body").onkeypress = keyPress;
+                
+                // determining what is the key user pressed, and call the function
+                function keyPress(e) { 
+
+                    if (e.key === 'h') { 
+                      playHihat();
+                    } else if (e.key === 'k') { 
+                      playKick();
+                    } else if (e.key === 'f') { 
+                      playFloordrum();
+                    } else if (e.key === 'r') { 
+                      playRide();
+                    } else if (e.key === 's') { 
+                      playSnare();
+                    } else if (e.key === 't') { 
+                      playTom();
+                    } else if (e.key === 'c') { 
+                      playCrash();
+                    }
+                }
+                
+                function playHihat() {
+                    // Find the hihat audio file
+                    const audio = document.querySelector('#sound-hihat');
+                    
+                    // Rewind to the beginning
+                    audio.currentTime = 0;
+                    
+                    
+                    // Play the audio file that we find
+                    audio.play();
+                    
+                    // Find the #hihat box
+                    const button = document.querySelector('#hihat');
+                    
+                    // Add the playing class to it
+                    button.classList.add('playing');
+                }
+                
+                
+                function playKick() {
+                    // Find the kick audio file
+                    const audio = document.querySelector('#sound-kick');
+                    
+                    // Rewind to the beginning
+                    audio.currentTime = 0;
+                    
+                    
+                    // Play the audio file that we find
+                    audio.play();
+                    
+                    // Find the #kick box
+                    const button = document.querySelector('#kick');
+                    
+                    // Add the playing class to it
+                    button.classList.add('playing');
+                }
+                
+                
+                function playFloordrum() {
+                    // Find the floordrum audio file
+                    const audio = document.querySelector('#sound-floordrum');
+                    
+                    // Rewind to the beginning
+                    audio.currentTime = 0;
+                    
+                    
+                    // Play the audio file that we find
+                    audio.play();
+                    
+                    // Find the #floordrum box
+                    const button = document.querySelector('#floordrum');
+                    
+                    // Add the playing class to it
+                    button.classList.add('playing');
+                }
+                
+                
+                function playRide() {
+                    // Find the ride audio file
+                    const audio = document.querySelector('#sound-ride');
+                    
+                    // Rewind to the beginning
+                    audio.currentTime = 0;
+                    
+                    
+                    // Play the audio file that we find
+                    audio.play();
+                    
+                    // Find the #ride box
+                    const button = document.querySelector('#ride');
+                    
+                    // Add the playing class to it
+                    button.classList.add('playing');
+                }
+                
+                
+                function playSnare() {
+                    // Find the snare audio file
+                    const audio = document.querySelector('#sound-snare');
+                    
+                    // Rewind to the beginning
+                    audio.currentTime = 0;
+                    
+                    
+                    // Play the audio file that we find
+                    audio.play();
+                    
+                    // Find the #snare box
+                    const button = document.querySelector('#snare');
+                    
+                    // Add the playing class to it
+                    button.classList.add('playing');
+                }
+                
+                
+                function playTom() {
+                    // Find the tom audio file
+                    const audio = document.querySelector('#sound-tom');
+                    
+                    // Rewind to the beginning
+                    audio.currentTime = 0;
+                    
+                    
+                    // Play the audio file that we find
+                    audio.play();
+                    
+                    // Find the #tom box
+                    const button = document.querySelector('#tom');
+                    
+                    // Add the playing class to it
+                    button.classList.add('playing');
+                }
+                
+                
+                function playCrash() {
+                    // Find the crash audio file
+                    const audio = document.querySelector('#sound-crash');
+                    
+                    // Rewind to the beginning
+                    audio.currentTime = 0;
+                    
+                    
+                    // Play the audio file that we find
+                    audio.play();
+                    
+                    // Find the #crash box
+                    const button = document.querySelector('#crash');
+                    
+                    // Add the playing class to it
+                    button.classList.add('playing');
+                }
+                
+            });
+            
+        </script>
+        
+        <header id="top">
+            <h1>Drum Kit</h1>
+            <hr>
+            <ul class="navbar">
+                <li><a href="../home.html">Home</a></li>
+                <li class="dropdown"><a href="#" class="dropit">Pianos</a>
+                    <!-- below is dropdown menu -->
+                    <section class="drop-content">
+                        <a href="../piano/upright_piano.html">Upright Piano</a>
+                        <a href="../piano/grand_piano.html">Grand Piano</a>
+                    </section>
+                </li>
+                <li class="dropdown"><a href="#" class="dropit">Guitars</a>
+                    <section class="drop-content">
+                        <a href="../guitar/acoustic_guitar.html">Acoustic Guitar</a>
+                        <a href="../guitar/electric_guitar.html">Electric Guitar</a>
+                    </section>
+                </li>
+                <li><a href="drums.html">Drum Kit</a></li>
+            </ul>
+        </header>
+        
+        <!-- three pics in same line, I get this idea from w3schools.com -->
+        <section class="picrow">
+            <section class="piccol">
+                <img src="../pictures/drums1.jpg" alt="Drums 1" title="Drums 1">
+            </section>
+            <section class="piccol">
+                <img src="../pictures/drums3.jpg" alt="Drums 3" title="Drums 3">
+            </section>
+            <section class="piccol">
+                <img src="../pictures/drums2.jpg" alt="Drums 2" title="Drums 2">
+            </section>
+        </section>
+        
+        <section>
+            <article>
+                <h3>Introduce Drum Kit</h3>
+                
+                <!-- this introduction paragraph is retrieved from https://en.wikipedia.org/wiki/Drum_kit -->
+                <p class="content">A drum kit — also called a drum set, trap set (a term using a contraction of the word, 
+                    "contraption"), or simply drums — is a collection of drums and other percussion instruments, typically cymbals, 
+                    which are set up on stands to be played by a single player,[1] with drumsticks held in both hands, 
+                    and the feet operating pedals that control the hi-hat cymbal and the beater for the bass drum. 
+                    A drum kit consists of a mix of drums (categorized classically as membranophones, Hornbostel-Sachs 
+                    high-level classification 2) and idiophones – most significantly cymbals, but can also include the woodblock 
+                    and cowbell (classified as Hornbostel-Sachs high-level classification 1).[2] In the 2000s, some kits also 
+                    include electronic instruments (Hornbostel-Sachs classification 53). Also, both hybrid (mixing acoustic 
+                    instruments and electronic drums) and entirely electronic kits are used. </p>
+                <br><br><br>
+            </article>
+            
+            <article>
+                <h2>Basic Components of Drum Kit</h2><br>
+                <h4>Click the components and listen to the sound!!<br>
+                (or by pressing the first letter of components on keyboard)</h4><br>
+                <ul id="drum">
+                    <li id="kick"><u>K</u>ick (Bass Drum)</li>
+                    <li id="snare"><u>S</u>nare Drum</li>
+                    <li id="tom"><u>T</u>om-tom Drums</li>
+                    <li id="floordrum"><u>F</u>loor Drum</li>
+                    <li id="hihat"><u>H</u>i-hat</li>
+                    <li id="crash"><u>C</u>rash Cymbal</li>
+                    <li id="ride"><u>R</u>ide Cymbal</li>
+                </ul>
+                <!-- the audio data -->
+                <audio id="sound-hihat" src="https://s3.us-east-2.amazonaws.com/te-codepen/hihat.wav"></audio>
+                <audio id="sound-kick" src="https://s3.us-east-2.amazonaws.com/te-codepen/kick.wav"></audio>
+                <audio id="sound-floordrum" src="https://s3.us-east-2.amazonaws.com/te-codepen/boom.wav"></audio>
+                <audio id="sound-ride" src="https://s3.us-east-2.amazonaws.com/te-codepen/ride.wav"></audio>
+                <audio id="sound-snare" src="https://s3.us-east-2.amazonaws.com/te-codepen/snare.wav"></audio>
+                <audio id="sound-tom" src="https://s3.us-east-2.amazonaws.com/te-codepen/tom.wav"></audio>
+                <audio id="sound-crash" src="https://dl.dropboxusercontent.com/s/kwlzsclmqcstsbw/crash1.wav?dl=0"></audio>
+                
+            </article>
+        </section>
+        
+        <footer>
+            <!-- click to go to the top of the page -->
+            <p><a href="#top" class="gotop">Go to top</a></p>
+            <p>Copyright © 2019 by Po-I Wu</p>
+        </footer>
+    </body>
+</html>

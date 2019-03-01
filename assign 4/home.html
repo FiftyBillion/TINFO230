@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- this is the home page -->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>My Musical Instruments</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="jquery/jquery-3.3.1.min.js"></script>
+    </head>
+    
+    <body>
+        
+        <script>
+            
+            // origianl creation
+            $(document).ready(function(){
+            
+                // this set the time loop, make it check the radio button is changed or not every 0.1 sec
+                // if it is change, then show the picture related to the button
+                setInterval(function(){
+                    if(document.getElementById("inputguitar").checked) {
+                        $("#formguitar").fadeIn(500).show();
+                        $("#formdrums").hide();
+                        $("#formpiano").hide();
+                    }
+                    else if(document.getElementById("inputdrums").checked) {
+                        $("#formdrums").fadeIn(500).show();
+                        $("#formpiano").hide();
+                        $("#formguitar").hide();
+                    }
+                    else {
+                        $("#formpiano").fadeIn(500).show();
+                        $("#formguitar").hide();
+                        $("#formdrums").hide();
+                    }
+                },100);
+                
+            });
+            
+        </script>
+        
+        <header id="top">
+            <h1>Welcome to My Musical Instruments</h1>
+            <hr>
+            <ul class="navbar">
+                <li><a href="home.html">Home</a></li>
+                <li class="dropdown"><a href="#" class="dropit">Pianos</a>
+                    <!-- below is dropdown menu -->
+                    <section class="drop-content">
+                        <a href="piano/upright_piano.html">Upright Piano</a>
+                        <a href="piano/grand_piano.html">Grand Piano</a>
+                    </section>
+                </li>
+                <li class="dropdown"><a href="#" class="dropit">Guitars</a>
+                    <section class="drop-content">
+                        <a href="guitar/acoustic_guitar.html">Acoustic Guitar</a>
+                        <a href="guitar/electric_guitar.html">Electric Guitar</a>
+                    </section>
+                </li>
+                <li><a href="drums/drums.html">Drum Kit</a></li>
+            </ul>
+        </header>
+        
+        <section class="center">
+            <article>
+                <img id="homepic" src="pictures/instruments.jpg" alt="picture of instruments" title="picture of instruments">
+                <h3>Introduction</h3>
+                <p class="content">My name is Po-I Wu (Kevin). I can play many kinds of musical instruments. 
+                    This website will show you some of the instruments that I can play and also introduce
+                    those instruments. I have been playing piano for more than 10 years, and drums for more
+                    then four years. I can also play guitar, but not very professional. I learn guitar by
+                    myself only. Also, I can play Erhu. It is a Chinese instrument. I like to play these instruments
+                    and make song by using DAW (Digital Audio Workstation) such as logic pro for Mac users, and FL studio
+                    for all platform users.</p>
+            </article>
+        </section>
+        
+        <section class="survey1">
+            <form>
+                Which musical instrument you like the most?<br><br>
+                <input id="inputpiano" type="radio" name="choice" value="piano" checked="checked">Piano<br><br>
+                <input id="inputguitar" type="radio" name="choice" value="guitar">Guitar<br><br>
+                <input id="inputdrums" type="radio" name="choice" value="drums">Drum Kit<br><br>
+                <button type="submit">Submit</button>
+                <img id="formpiano" src="pictures/grandpiano1.jpg" alt="Piano demo" title="Piano">
+                <img id="formguitar" src="pictures/acousticguitar1.jpg" alt="Guitar demo" title="Guitar">
+                <img id="formdrums" src="pictures/drums1.jpg" alt="Drums demo" title="Drums">
+            </form>
+        </section>
+        <section class="survey2">
+            <form>
+                What genre of music do you like?<br><br>
+                <input type="checkbox" name="favorite" value="blues">Blues
+                <input type="checkbox" name="favorite" value="classical">Classical
+                <input type="checkbox" name="favorite" value="jazz">Jazz<br><br>
+                <input type="checkbox" name="favorite" value="pop">Pop
+                <input type="checkbox" name="favorite" value="edm">EDM
+                <input type="checkbox" name="favorite" value="other">other<br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section class="emailaddress">
+            <form>Please tell me your gmail:
+                <input type="email" pattern=".+@gmail.com" placeholder="abc@gmail.com" required>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+        <footer>
+            <!-- click to go to the top of the page -->
+            <p><a href="#top" class="gotop">Go to top</a></p>
+            <p>Copyright © 2019 by Po-I Wu</p>
+        </footer>
+    </body>
+</html>

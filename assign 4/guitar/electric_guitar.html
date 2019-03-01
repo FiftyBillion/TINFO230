@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- this is the electric guitar page -->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Electric Guitar</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <script src="../jquery/jquery-3.3.1.min.js"></script>
+    </head>
+    
+    <body>
+        
+        <script>
+            // original creation
+            $(document).ready(function(){
+                
+                // change the pic to question mark
+                // when user click it, it will change back to original picture
+                // it is kind of a reveal function
+                // the user can only reveal once, so I put the unbind function after click
+                $("#eg").attr("src", "../pictures/question.jpg");
+                $("#eg").click(function(){
+                    $(this).unbind("click");
+                    $(this).fadeOut();
+                    $(this).fadeIn();
+                    setTimeout(function () {
+                        $("#eg").attr("src", "../pictures/electricguitar4.jpg");
+                    }, 400);
+                });
+            });
+            
+        </script>
+        
+        <header id="top">
+            <h1>Electric Guitar</h1>
+            <hr>
+            <ul class="navbar">
+                <li><a href="../home.html">Home</a></li>
+                <li class="dropdown"><a href="#" class="dropit">Pianos</a>
+                    <!-- below is dropdown menu -->
+                    <section class="drop-content">
+                        <a href="../piano/upright_piano.html">Upright Piano</a>
+                        <a href="../piano/grand_piano.html">Grand Piano</a>
+                    </section>
+                </li>
+                <li class="dropdown"><a href="#" class="dropit">Guitars</a>
+                    <section class="drop-content">
+                        <a href="acoustic_guitar.html">Acoustic Guitar</a>
+                        <a href="electric_guitar.html">Electric Guitar</a>
+                    </section>
+                </li>
+                <li><a href="../drums/drums.html">Drum Kit</a></li>
+            </ul>
+        </header>
+        
+        <!-- three pics in same line, I get this idea from w3schools.com -->
+        <section class="picrow">
+            <section class="piccol">
+                <img src="../pictures/electricguitar1.jpg" alt="Electric guitar 1" title="Electric guitar 1">
+            </section>
+            <section class="piccol">
+                <img src="../pictures/electricguitar3.jpg" alt="Electric guitar 3" title="Electric guitar 3">
+            </section>
+            <section class="piccol">
+                <img src="../pictures/electricguitar2.jpg" alt="Electric guitar 2" title="Electric guitar 2">
+            </section>
+        </section>
+        
+        <section>
+            <article>
+                <h3>Introduce Electric Guitar</h3>
+                
+                <!-- this introduction paragraph is retrieved from https://en.wikipedia.org/wiki/Electric_guitar -->
+                <p class="content">An electric guitar is a guitar that uses one or more pickups to convert the vibration 
+                    of its strings into electrical signals. The vibration occurs when a guitar player strums, plucks, 
+                    fingerpicks, slaps or taps the strings. The pickup used to sense the vibration generally uses 
+                    electromagnetic induction to do so, though other technologies exist. In any case, the signal generated 
+                    by an electric guitar is too weak to drive a loudspeaker, so it is fed to a guitar amplifier before 
+                    being sent to the speaker(s), which converts it into audible sound.</p>
+                
+                <p class="content">Since the output of an electric guitar is an electric signal, 
+                    it can be electronically altered to change the timbre of the sound. Often, the signal is modified 
+                    using effects such as reverb, and distortion and "overdrive"; the latter effect is considered to 
+                    be a key element of electric blues guitar music and rock guitar playing.</p>
+                <br><br><br>
+            </article>
+        </section>
+        
+        <section>
+            <article>
+                <h2>This is my favorite guitar style</h2><br>
+                <h4>Click it to reveal!</h4>
+                <img id="eg" src="../pictures/electricguitar4.jpg" alt="Black and red electric guitar" title="Black and red electric guitar">
+            </article>
+        </section>
+        
+        <footer>
+            <!-- click to go to the top of the page -->
+            <p><a href="#top" class="gotop">Go to top</a></p>
+            <p>Copyright © 2019 by Po-I Wu</p>
+        </footer>
+    </body>
+</html>
