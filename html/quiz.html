@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+		
+		<title>Quiz | Active Shooting Preparedness</title>
+			
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+		<script src="javascript/quiz.js"></script>
+		
+		<link type="text/css" rel="stylesheet" href="css/quiz.css"> 
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+<body>
+	<header>
+	
+	<section class="darktopblock">
+                <img class="logo" src="images/ig_logo_title.png" alt="logo" style="width: 320px; height: 130px;">
+			</section>
+			
+		    <section class="greenbar">
+			</section>
+            
+            <section class="darkbarmenu">
+			</section>
+	
+			<!--Navigation-->
+			<nav>
+
+
+					<ul class="navigation">
+						<li><a href="home.html">HOME</a></li>
+						<li><a href="training.html">TRAINING</a></li>
+						<li><a href="quiz.html">QUIZ</a></li>
+						<li><a href="resources.html">EXTERNAL RESOURCES</a></li>
+						<li><a href="about.html">ABOUT</a></li>
+					</ul>
+			</nav>
+	
+
+			<h1 class ="wideBox">Test Your Knowledge</h1>
+			<h2 class ="wideBox">Match the answers on the left with the correct questions on the right.</h2>
+	
+	</header>
+	
+		<section id="content">
+			<article id="draggableBlocks"> </article>
+			<article id="targetArea"> </article>
+			<article id="message"> </article>
+			
+			<article id="successMessage">
+			<h2>You've Completed Your Training!</h2>
+			<button onclick="init()">Quiz Yourself Again?</button>
+			</article>
+		</section>
+	
+	</body>
+	
+</html>
